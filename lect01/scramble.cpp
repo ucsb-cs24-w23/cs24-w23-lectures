@@ -1,7 +1,7 @@
 //scramble.cpp
 #include <iostream>
 using namespace std;
-//Recursive
+// Recursively print all the scramblings of letters, starting with the prefix result
 // result = "a", letters = "bc"
 void scrambleHelper(string result, string letters){
     if(letters.length() == 0){
