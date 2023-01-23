@@ -13,7 +13,7 @@ Complex::Complex(double re, double im)
 
 double Complex::getMagnitude() const
 {
-    return sqrt(real * real + imag * imag);
+    return sqrt(getReal() * getReal() + getImaginary() * getImaginary());
 }
 
 double Complex::getReal() const
@@ -28,18 +28,18 @@ double Complex::getImaginary() const
 
 void Complex::print() const
 {
-    if (imag >= 0)
+    if (getImaginary() >= 0)
     {
-        cout << setw(2) << real << " +" << setw(2) << imag << "j" << endl;
+        cout << setw(2) << getReal() << " +" << setw(2) << getImaginary() << "j" << endl;
     }
     else if (imag < 0)
     {
-        cout << setw(2) << real << " -" << setw(2) << -imag << "j" << endl;
+        cout << setw(2) << getReal() << " -" << setw(2) << -getImaginary() << "j" << endl;
     }
 }
 void Complex::conjugate()
 {
-    imag = -1 * imag;
+    imag = -1 * getImaginary();
 }
 void Complex::setReal(double r)
 {
