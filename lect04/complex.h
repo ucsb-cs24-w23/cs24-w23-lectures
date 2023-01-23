@@ -18,10 +18,6 @@ public:
     void conjugate();
     void setReal(double r);
     void setImag(double r);
-    Complex operator+(Complex &b)
-    {
-        return Complex(this->real + b.real, this->imag + b.imag);
-    }
 };
 
 
