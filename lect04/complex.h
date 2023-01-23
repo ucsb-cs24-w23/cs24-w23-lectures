@@ -24,9 +24,4 @@ public:
     }
 };
 
-ostream &operator<<(ostream &out, const Complex &data)
-{
-    data.print();
-    return cout;
-}
 

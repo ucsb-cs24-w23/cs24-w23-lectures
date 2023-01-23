@@ -63,8 +63,6 @@ int main(int argc, char const *argv[])
     Complex *q = new Complex(2, 3);
     Complex w(10, -5);
     w.conjugate();
-    cout << w;
-    q->print();
-    foo();
+    w.print();
     return 0;
 }
