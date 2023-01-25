@@ -18,7 +18,7 @@ public:
     void conjugate();
     void setReal(double r);
     void setImag(double r);
-    friend ostream& operator<<(ostream& out, const Complex& x);
+    //friend ostream& operator<<(ostream& out, const Complex& x);
     // If a non-member function needs to access private member variables
     // of a class, declare it as a friend function (see above)
     Complex operator+(const Complex& y){
@@ -37,8 +37,9 @@ public:
 
 ostream& operator<<(ostream& out, const Complex& x){
    // cout << " Overloaded << "<< endl;
-    cout << x.real << " + j "<< x.imag <<endl;
-   // Preferable to use the public getter functions  
+   // cout << x.real << " + j "<< x.imag <<endl;
+   // Preferable to use the public  functions 
+    x.print(); 
     return out;
 }
 
