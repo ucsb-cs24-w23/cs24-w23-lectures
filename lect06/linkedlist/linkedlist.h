@@ -8,24 +8,17 @@ using namespace std;
 
 class LinkedList{
     public: 
-        //Initialization list
-        LinkedList():head(nullptr), tail(nullptr){
-        }
-        ~LinkedList(){
-            // correctly free heap memory associated with the object 
-             clear();
-        }
-        void prepend(string value);
-        void append(string value);
-        string getMax() const;
-        string getMin() const;
+        void prepend(int value);
+        void append(int value);
+        int getMax() const;
+        int getMin() const;
         void clear();
         void print() const;
-        bool search(string value) const;
+        bool search(int value) const;
 
     private:
         struct Node{
-            string data;
+            int data;
             Node* next; // self-referencing type
         };
         Node* head;

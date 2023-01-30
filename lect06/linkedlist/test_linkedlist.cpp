@@ -21,8 +21,6 @@ void example_segfault(){
 
 int main(int argc, char const *argv[])
 {
-
     // example_segfault();
-
     return 0;
 }
