@@ -46,11 +46,11 @@ void Complex::print() const
 {
     if (getImaginary() >= 0)
     {
-        cout << setw(2) << getReal() << " + " << setw(2) << getImaginary() << "j" << endl;
+        cout << setw(2) << getReal() << " +" << setw(2) << getImaginary() << "j" << endl;
     }
     else if (getImaginary() < 0)
     {
-        cout << setw(2) << getReal() << " - " << setw(2) << -getImaginary() << "j" << endl;
+        cout << setw(2) << getReal() << " -" << setw(2) << -getImaginary() << "j" << endl;
     }
 }
 void Complex::conjugate()
