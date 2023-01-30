@@ -15,6 +15,17 @@ Complex::Complex(const Complex &other)
     real = new double(other.getReal());
     imag = new double(other.getImaginary());
 }
+Complex::~Complex()
+{
+    delete real;
+    delete imag;
+}
+Complex Complex::operator+(const Complex &y)
+{
+    // cout << "Member function add"<< endl;
+    return Complex(this->getReal() + y.getReal(),
+                   this->getImaginary() + y.getImaginary());
+}
 
 double Complex::getMagnitude() const
 {

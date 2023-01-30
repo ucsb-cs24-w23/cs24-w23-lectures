@@ -1,4 +1,4 @@
-//complex.cpp
+// complex.cpp
 #include <iostream>
 #include <cmath>
 #include <iomanip>
@@ -9,12 +9,11 @@ Complex::Complex(double re, double im)
 {
     real = new double(re);
     imag = new double(im);
-
 }
-Complex::Complex(const Complex& other){
+Complex::Complex(const Complex &other)
+{
     real = new double(other.getReal());
     imag = new double(other.getImaginary());
-
 }
 
 double Complex::getMagnitude() const
@@ -69,13 +68,13 @@ int main(int argc, char const *argv[])
     //  foo();
     Complex x(1, 2);
     Complex y(x); // Call copy constructor
-    cout << "y ="<< y << endl;
+    cout << "y =" << y << endl;
 
     // Complex z  = y; // Copy constructor
     // cout << "z ="<< z << endl;
 
     // Complex w(3, 4);
     // x = w; // Copy-assignment operator
-    // cout << "x =" << x << endl;    
+    // cout << "x =" << x << endl;
     return 0;
 }

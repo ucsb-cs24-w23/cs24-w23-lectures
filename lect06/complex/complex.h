@@ -11,11 +11,7 @@ private:
 public:
     Complex(double re = 0, double im = 0);
     Complex(const Complex &other);
-    ~Complex()
-    {
-        delete real;
-        delete imag;
-    }
+    ~Complex();
     double getMagnitude() const;
     double getReal() const;
     double getImaginary() const;
@@ -23,15 +19,10 @@ public:
     void conjugate();
     void setReal(double r);
     void setImag(double r);
+    Complex operator+(const Complex &y);
     // friend ostream& operator<<(ostream& out, const Complex& x);
     //  If a non-member function needs to access private member variables
     //  of a class, declare it as a friend function (see above)
-    Complex operator+(const Complex &y)
-    {
-        // cout << "Member function add"<< endl;
-        return Complex(this->getReal() + y.getReal(),
-                       this->getImaginary() + y.getImaginary());
-    }
 };
 // //non-member add
 // Complex operator+(const Complex& x, const Complex& y){
