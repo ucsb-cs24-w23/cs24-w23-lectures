@@ -1,4 +1,4 @@
-//complex.cpp
+// complex.cpp
 #include <iostream>
 #include <cmath>
 #include <iomanip>
@@ -9,12 +9,11 @@ Complex::Complex(double re, double im)
 {
     real = new double(re);
     imag = new double(im);
-
 }
-Complex::Complex(const Complex& other){
+Complex::Complex(const Complex &other)
+{
     real = new double(other.getReal());
     imag = new double(other.getImaginary());
-
 }
 
 double Complex::getMagnitude() const
@@ -64,12 +63,13 @@ void foo()
     delete q;
 }
 
-void bar(){
+void bar()
+{
     Complex x(1, 2);
     Complex y(x);
     Complex z(3, 4);
-    x = z; 
-    cout << "x =" << x << endl;     
+    x = z;
+    cout << "x =" << x << endl;
 }
 
 int main(int argc, char const *argv[])
