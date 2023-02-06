@@ -9,6 +9,8 @@ using namespace std;
 class LinkedList
 {
 public:
+    LinkedList():head(nullptr), tail(nullptr){}
+    ~LinkedList(){clear();}
     void prepend(int value);
     void append(int value);
     int getMax() const;

@@ -20,8 +20,15 @@ void example_segfault()
     // Error happens when we try to access heap memory that was already freed or deleted
 }
 
+void test_prepend_0(){
+    LinkedList ll;
+    ll.prepend(10);
+    ll.print();
+}
+
 int main(int argc, char const *argv[])
 {
     // example_segfault();
+    test_prepend_0();
     return 0;
 }

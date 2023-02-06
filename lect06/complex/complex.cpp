@@ -20,6 +20,14 @@ Complex::~Complex()
     delete real;
     delete imag;
 }
+Complex& Complex::operator=(const Complex& other){
+    if(this == &other){
+        return *this;
+    }
+    *real = *(other.real);
+    *imag = *(other.imag);
+    return *this;
+}
 Complex Complex::operator+(const Complex &y)
 {
     // cout << "Member function add"<< endl;
@@ -81,6 +89,8 @@ void bar()
     Complex z(3, 4);
     x = z;
     cout << "x =" << x << endl;
+    x = y = z;
+    x = x;
 }
 
 int main(int argc, char const *argv[])

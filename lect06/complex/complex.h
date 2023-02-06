@@ -20,6 +20,7 @@ public:
     void setReal(double r);
     void setImag(double r);
     Complex operator+(const Complex &y);
+    Complex& operator=(const Complex& other);
     // friend ostream& operator<<(ostream& out, const Complex& x);
     //  If a non-member function needs to access private member variables
     //  of a class, declare it as a friend function (see above)
