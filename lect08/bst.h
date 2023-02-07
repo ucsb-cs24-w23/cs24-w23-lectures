@@ -11,35 +11,22 @@ public:
     int max() const;
     void printInorder() const;
     bool insert(int value);
+    void createSmallExample();
 
 private:
 
     struct bstNode{
+        const int data;
         bstNode *parent;
         bstNode *left;
         bstNode *right;
-        int data;
-        bstNode(int value, bstNode *l=nullptr, bstNode *r=nullptr, bstNode* p = nullptr): 
-                data(value), left(l), right(r), parent(p){
-
-        }
+        bstNode(int value, bstNode* p = nullptr, bstNode *l=nullptr, bstNode *r=nullptr ): 
+                data(value), parent(p), left(l), right(r){}
     };
 
     bstNode *root;
     void printInorder(bstNode* r) const;
 
 };
-
-void bst::printInorder() const{
-    printInorder(root);
-}
-
-void bst::printInorder(bstNode* r) const{
-    if(!r) return;
-    printInorder(r->left);
-    cout << r->data << endl;
-    printInorder(r->right);
-}
-
 
 #endif
