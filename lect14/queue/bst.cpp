@@ -15,6 +15,20 @@ BST::~BST() {
     clear(root);
 }
 
+void BST::preorderInsert(Node *r){
+	if(!r) return;
+	insert(r->info);
+	preorderInsert(r->left);
+	preorderInsert(r->right);
+}
+
+BST::BST(const BST& other){
+	root = nullptr;
+	preorderInsert(other.root);
+}
+
+
+
 // recursive helper for destructor
 void BST::clear(Node *n) {
     if (n) {

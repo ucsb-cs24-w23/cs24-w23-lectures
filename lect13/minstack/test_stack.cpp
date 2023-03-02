@@ -2,21 +2,21 @@
 #include <iostream>
 #include <vector>
 #include <stack>
-#include "mystack.h"
+#include "minstack.h"
 using namespace std;
 int main(int argc, char const *argv[])
 {
-    vector<int> nums = {40, 30, 404, 200, 390, 2 , 1};
+    vector<int> nums = {1, 2, -3, 4, 5};
     stack<int> stl_stack;
-    mystack<int> s;
-    mystack<string> snames;
+    minStack<int> s;
+    minStack<string> snames;
     for(auto elem : nums){
         s.push(elem);
     }
     //cout << "Top: " << s.top() << endl;
 
     while(!s.empty()){
-        cout << "Top: " << s.top() << endl;
+        cout << "Top: " << s.top() <<" Min: " << s.min() << endl;
         s.pop();
     }
 

@@ -16,6 +16,7 @@ class BST {
     // ctor, dtor, insert and one print method already done in BST.cpp:
     BST();                   // constructor
     ~BST();                  // destructor
+    BST(const BST& other);
     bool insert(int value);     // insert value; return false if duplicate
     bool contains(int value) const;  // true if value is in tree
     void printPreOrder() const; // prints tree data pre-order to cout
@@ -38,6 +39,7 @@ class BST {
     void clear(Node *n); // for destructor
     bool insert(int value, Node *n); // note overloading names for simplicity
     void printPreOrder(Node *n) const;
+    void preorderInsert(Node* r);
     
 };
 

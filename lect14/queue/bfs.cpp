@@ -14,8 +14,13 @@ int main() {
     for (auto elem : v1){
         b.insert(elem);
     }
-    cout<<"Printing out keys breadth first"<<endl;
-    b.printBreadthFirst();
+    cout << "printing b" << endl;
+    b.printPreOrder();
+    cout << endl;
+    BST b2 = b;
+    b2.printPreOrder();
+    //cout<<"Printing out keys breadth first"<<endl;
+   //b.printBreadthFirst();
   
     return 0;
 }
