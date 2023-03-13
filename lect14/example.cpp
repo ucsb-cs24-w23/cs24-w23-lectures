@@ -32,7 +32,26 @@ void mystery(vector<int>& v){
         }
     }
 }
+void simple_sort(vector<int>& v){
+    sort(v.begin(), v.end());
+}
+void simpe_heap_sort(vector<int>& v){
+    priority_queue<int> pq; // O(1)
+    for(auto& elem: v){
+        pq.push(elem); //O(log n)
+    }
+    // O(nlog n)
+    
+    int i = 0;
+    while(!pq.empty()){
+        v[i] = pq.top(); // store max element : O(1)
+        pq.pop(); //delete the top element - element with max value: O(log n)
+        i++;
+    }
+    // O(n logn)
+   // overall: O(n logn)
 
+}
 
 
 int main(int argc, char const *argv[])
@@ -44,7 +63,7 @@ int main(int argc, char const *argv[])
     }
     cout<<"Before"<<endl;
     visualize(v);
-    mystery(v);
+    simple_sort(v);
     cout<<"After"<<endl;
     visualize(v);
 
