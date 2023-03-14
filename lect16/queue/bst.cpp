@@ -2,6 +2,7 @@
 // Modified version of lab04 starter code for demo purposes
 
 #include <iostream>
+#include <queue>
 #include "bst.h"
 using std::cout;
 
@@ -91,6 +92,22 @@ void BST::printPreOrder(Node *n) const {
 
 
 void BST::printBreadthFirst() const{
+	if(!root) return;
+	queue<Node*> q;
+	q.push(root);
+	while(!q.empty()){
+		Node* fr = q.front();
+		cout << fr->info << " ";
+		if( fr->left){
+			q.push(fr->left);
+		}
+		if( fr->right){
+			q.push(fr->right);
+		}
+		
+		q.pop();
+	}
+	cout << endl;
 
 }
 
